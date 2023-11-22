@@ -1,4 +1,5 @@
 import random as rd
+from strava import get_lunch
 
 greetings = ["Hey!", "Hi there!", "Howdy", "Hello"]
 colors = ["Red", "Black", "Green"]
@@ -19,4 +20,6 @@ def get_response(message: str) -> str:
 
     if p_message == "!help":
         return "`There's no help`"
-     
+    
+    if p_message == "!lunch":
+        return get_lunch()
